@@ -47,3 +47,14 @@ variable "private_dns_resolver_inbound_endpoints" {
   }))
   default = null
 }
+
+# azurerm_private_dns_resolver_outbound_endpoint
+variable "private_dns_resolver_outbound_endpoints" {
+  description = "Manages Private DNS Resolver Outbound Endpoints."
+  type = map(object({
+    private_dns_resolver_id = string
+    subnet_id               = string
+    subnet_name             = string
+  }))
+  default = null
+}
