@@ -15,6 +15,11 @@ output "private_dns_resolver_id" {
   value       = try(azurerm_private_dns_resolver.this[0].id, null)
 }
 
+output "private_dns_resolver_name" {
+  description = "The name of the DNS Resolver."
+  value       = try(azurerm_private_dns_resolver.this[0].name, null)
+}
+
 # azurerm_private_dns_resolver_inbound_endpoint
 output "private_dns_resolver_inbound_endpoint_ids" {
   description = "The IDs of the Private DNS Resolver Inbound Endpoints."
